@@ -1,0 +1,18 @@
+#Hi there! Thanks for looking at the security protocol. If you'd like to report a bug, have a look at the policy before reporting, though it will really help me out!
+
+#Contact/Contactez/Kontaktieren/Kontakte
+#If you are reporting a bug related to a specific project, replace "19wintersp" with the repl name.
+Contact: https://bugreports.19wintersp.repl.co/report.php?project=19wintersp
+
+#Credits/Génériques/Ehren/Kreditt
+Acknowledgments: https://19wintersp.repl.co/reporters.txt
+
+#Language/Langue/Sprache/Språk
+#English, Français, Deutsch, Norsk
+Preferred-Languages: en,fr,de,no
+
+#Source/Mines/Ursprünge/Kilde
+Canonical: https://19wintersp.repl.co/security.txt
+
+#Policy/Politique/Politik/Politikk
+Policy: https://19wintersp.repl.co/reportingpolicy.txt

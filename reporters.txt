@@ -1,0 +1,2 @@
+This is a list of people who have helped to report bugs and security issues in 19wintersp software.
+
