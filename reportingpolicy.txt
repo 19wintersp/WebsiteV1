@@ -1,5 +1,0 @@
-Hi! If you find a bug or security issue in any piece of software which I have hosted on repl.it, please report to me. As I am terrible at programming, pointing out serious problems will really help me out.
-
-To report something, go to "https://bugreports.19wintersp.repl.co/report.php?project=PROJECTNAME" where PROJECTNAME is the repl name.
-
-We will work with you to fix the issue and you will be admitted into ./reporters.txt.
