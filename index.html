@@ -2,81 +2,125 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
-		<title>19wintersp</title>
-		<meta name="description" content="@19wintersp: Github"/>
-		<meta name="author" content="@19wintersp"/>
 		<base target="_blank"/>
-		<link rel="stylesheet" href="/styles/loader.css"/>
+		<meta name="description" content="@19wintersp on GitHub"/>
+		<meta name="author" content="@19wintersp"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>19wintersp</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+
+		<script src="index.js" defer></script>
 	</head>
 	<body>
-		<div id="title"></div>
-		<nav>
-			<section>
-				<label for="about">About</label>
-				<input tabindex="1" id="about" type="checkbox"/>
-				<article>
-					<label for="about">Close</label>
-					<h1>About me</h1>
-					<div>
-						Hello! I'm a human who likes to tell computers what to do. My first "proper" programming language was Python, however I mostly use NodeJS, Web Technologies and C++ now. I'll also occasionally use Java and C#, though the the JVM and .NET Framework annoy me a little. I also want to use Deno, but Replit is being a bit annoying at the moment by using a version that's horribly out of date.<br/><br/>
-						At the moment, I'm working on a few projects, which you can see more of in <i>Projects</i>. My main foci are a stock-trading simulation game, a music notation app, and a fully-featured voice- and text- chat application; all of which are built with Web Technologies.<br/><br/>
-					</div>
-				</article>
-			</section>
-			<section>
-				<label for="proj">Projects</label>
-				<input tabindex="2" id="proj" type="checkbox"/>
-				<article>
-					<label for="proj">Close</label>
-					<h1>Projects</h1>
-					<div>
-						Here's a list of some of the projects I've made or am making. You can see all of them on <a href="//repl.it/@19wintersp">my Replit profile</a>.
-						<section>
-							<h2>Polyphony (Preview)</h2>
-							<p><a href="https://polyphonypreview.19wintersp.repl.co/">Site</a> | <a href="//repl.it/@19wintersp/PolyphonyPreview">Code</a> | <a href="https://repl.it/talk/share/TESTING-Voice-and-Text-chat-with-WebSockets/79045">Post</a></p>
-							Polyphony Preview is a site used to test technologies which will eventually become a part of Polyphony: my voice- and text- chat application which is essentially just a cheap knockoff of Discord. PolyphonyPreview lets you chat through messages and group calls, along with private, shareable rooms. Don't worry though, the finished version will look much better, have many more features, and actual accounts and permanent messages.
-						</section><hr/>
-						<section>
-							<h2>ConnectFour Bot</h2>
-							<p><a href="//repl.it/@19wintersp/ConnectFourBot">Code</a> | <a href="https://repl.it/talk/share/ConnectFour-with-difficult-AI/60977">Post</a></p>
-							My ConnectFour bot was a test of C++, as it was one of the first relatively complex programs I made in it. The bot used "reality branches" to compute its best move, however it struggled on the speed side. I'm still trying to figure out how to use multithreading. I suggest that you fork this repl and fiddle around with some of the configuration, and see if you can tune-out some of the bugs it has.
-						</section><hr/>
-						<section>
-							<h2>GameMaker GUI</h2>
-							<p><a href="https://gamemakergui.19wintersp.repl.co/">Site</a> | <a href="//repl.it/@19wintersp/GameMakerGUI">Code</a> | <a href="https://repl.it/talk/share/pencil-Make-your-own-adventure-games/84512">Post</a></p>
-							GameMaker GUI was the web version of my unsuccessful GameMaker; both of which were designed to make it easier to create choose-your-own-adventure-style games. They both make use of a system to serialize (non-binary) trees, albeit with one much less exciting than the other. It's a bit hard to use, and the <i>Help</i> function is a bit useless, but it does work relatively well. It was also the prototype of my "new" design language (which should probably be named "Bland and Ugly") which was influenced by Material Design and Google, though with some elements from Metro.
-						</section><hr/>
-						<section>
-							<h2>XHTML Introduction*</h2>
-							<p><a href="https://xhtml-intro.xxpertHacker.repl.co/">Site</a> | <a href="//repl.it/@xxpertHacker/XHTML-Intro">Code</a> | <a href="https://repl.it/talk/share/XHTML-Introduction/82997">Post</a></p>
-							An Introduction to XHTML. Made by <a href="//repl.it/@xxpertHacker">@xxpertHacker</a>, this webpage introduces you to the magical world of XML being used to create webpages. I <i>strongly</i> suggest you have a look at it. I played a minor role in doing some CSS stuff and proofreading the draft a bit.
-						</section><hr/>
-						<small>*Not made by me</small>
-					</div>
-				</article>
-			</section>
-			<section>
-				<label for="blog">Blog</label>
-				<input tabindex="3" id="blog" type="checkbox"/>
-				<article>
-					<label for="blog">Close</label>
-					<h1>Blog</h1>
-					<section>
-						<h2>Hello, Github!</h2>
-						This version of the site is forked from my Replit site, and isn't yet finished and filled with my Github projects. Stay tuned...
-					</section>
-					<section>
-						<h2>Hello, redesign!</h2>
-						You're reading this on the redesign of the site! What do you think?
-					</section>
-				</article>
-			</section>
-			<section>
-				<a tabindex="4" href="//github.com/19wintersp">Github</a>
-			</section>
+		<nav id="nav">
+			<div>
+				<h1 style="cursor: default; margin-bottom: 0px;">19wintersp</h1>
+			</div>
+
+			<div>
+				<span><a target="_self" href="#home">Home</a></span>
+				<span><a target="_self" href="#abou">About</a></span>
+				<span><a target="_self" href="#proj">Projects</a></span>
+				<span><a target="_self" href="#cont">Contact</a></span>
+			</div>
 		</nav>
+
+		<header id="home">
+			<h1 id="title"> </h1>
+
+			<nav id="title-nav">
+				<span><a target="_self" href="#home">Home</a></span>
+				<span><a target="_self" href="#abou">About</a></span>
+				<span><a target="_self" href="#proj">Projects</a></span>
+				<span><a target="_self" href="#cont">Contact</a></span>
+			</nav>
+		</header>
+
+		<section id="abou">
+			<div></div>
+
+			<div>
+				<h2>About</h2>
+				<h3>Hi! I'm a human who tells computers what to do.</h3>
+
+				<p>My first "proper" programming language was Python, however I mostly use NodeJS, Web Technologies and C++ now, with an interest in Rust. I'll also occasionally use Java and C#, though the the JVM and .NET Framework annoy me a little. I also want to use Deno, but Replit is being a bit annoying at the moment by using a version that's horribly out of date.</p>
+				<p>At the moment, I'm working on a few projects, which you can see more of under Projects. My main foci are a video editor, a pair of MIDI-related applications in Rust, and a fully-featured voice- and text- chat application.</p>
+			</div>
+
+			<div><div></div><div></div></div>
+		</section>
+
+		<section id="proj">
+			<div></div>
+
+			<div>
+				<h2>Projects</h2>
+				<h3>Some of my work</h2>
+
+				<div row>
+					<div card>
+						<h4>Java-Http</h4>
+						<p>Java-Http is an ExpressJS-style server library which allows easy creation of a HTTP server with Java. Java-Http is non-blocking, and is based on the built-in Java Http library (com.sun.net.httpserver). The library has been mostly tested, and is actively maintained.</p>
+
+						<div row>
+							<a href="https://github.com/19wintersp/Java-Http" class="button main">Repo</a>
+						</div>
+					</div>
+
+					<div card>
+						<h4>Forms</h4>
+						<p>Forms is a basic survey system - it consists of a frontend and NodeJS server, which can be run on any device with Node and NPM, with very little setup.</p>
+
+						<div row>
+							<a href="https://github.com/19wintersp/Forms" class="button main">Repo</a>
+						</div>
+					</div>
+
+					<div card>
+						<h4>IsoDraw</h4>
+						<p>IsoDraw is a basic 2D technical drawing editor: a simple system for creating 2-dimensional technical drawings, with tools for drawing orthographically and isometrically.</p>
+
+						<div row>
+							<a href="https://github.com/19wintersp/IsoDraw" class="button main">Repo</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div><div></div><div></div></div>
+		</section>
+
+		<section id="cont">
+			<div></div>
+
+			<div>
+				<h2>Contact me</h2>
+				<h3>Get in touch</h3>
+
+				<ul>
+					<li>Replit - @19wintersp</li>
+					<li>GitHub - 19wintersp</li>
+					<li>Discord - 19wintersp#1177</li>
+				</ul>
+				<p>You will likely get the fastest response by DMing me on Discord.</p>
+			</div>
+
+			<div><div></div><div></div></div>
+		</section>
+
 		<footer>
-			Site created by @19wintersp with no JavaScript!
+			<big>19wintersp</big>
+
+			<div id="socials" row>
+				<div><a href="//replit.com/@19wintersp"><img src="https://avatars.githubusercontent.com/u/983194"></a></div>
+				<div><a href="//github.com/19wintersp"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png"></a></div>
+			</div>
+			
+			<p>Site created by 19wintersp, hosted by GitHub Pages</p>
+			<p>Copyright &copy; 2021 Patrick Winters</p>
 		</footer>
 	</body>
 </html>
