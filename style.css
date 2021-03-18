@@ -1,0 +1,265 @@
+@keyframes title-text {
+	0% { content: " "; }
+	10% { content: "1"; }
+	20% { content: "19"; }
+	30% { content: "19w"; }
+	40% { content: "19wi"; }
+	50% { content: "19win"; }
+	60% { content: "19wint"; }
+	70% { content: "19winte"; }
+	80% { content: "19winter"; }
+	90% { content: "19winters"; }
+	100% { content: "19wintersp"; }
+}
+@keyframes title-nav {
+	0%, 50% { filter: opacity(0%); }
+	75%, 100% { filter: opacity(100%); }
+}
+@keyframes scrollbar {
+	0%, 50% { width: 0px; }
+	75%, 100% { width: initial; }
+}
+@keyframes header {
+	0%, 50% { height: 100vh; }
+	75%, 100% { height: 60vh; }
+}
+@keyframes waves {
+	from { background-position: 0px; }
+	to { background-position: calc(var(--padding) * 4); }
+}
+@keyframes wavesr {
+	from { background-position: calc(var(--padding) * 4); }
+	to { background-position: 0px; }
+}
+
+:root {
+	--fd: #112;
+	--fl: #eee;
+	--bd: #ccc;
+	--cp: #6d9eeb;
+	--cs: #ebbb6d;
+	--cu: #cedff8;
+	--ca: #ddf7fa;
+	--cb: #ebe5fb;
+	--cc: #f4e6fb;
+
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+	font-family: "Roboto", sans-serif;
+	overflow-x: hidden;
+}
+
+::selection {
+	background-color: var(--cs);
+	color: var(--fd);
+}
+
+h1, h2, h3, h4, h5, h6, p, big, small {
+	margin-top: 0px;
+	margin-bottom: calc(0.5vh + 5px);
+}
+h1, h2, big {
+	font-family: "Montserrat", sans-serif;
+}
+h2 {
+	color: var(--cs);
+}
+
+a {
+	background: linear-gradient(180deg, #0000 0%, #0000 50%, var(--cs) 50%, var(--cs) 100%);
+	background-position: 0% 0%;
+	background-size: 100% 200%;
+	transition: background 400ms, color 400ms;
+	cursor: pointer;
+	text-decoration: transparent;
+	color: var(--cp);
+	border-radius: 0.1em;
+}
+a > img {
+	height: 1.5em;
+}
+nav a {
+	background: linear-gradient(180deg, #0000 0%, #0000 50%, var(--fl) 50%, var(--fl) 100%);
+	color: var(--fl);
+	background-size: 100% 300%;
+	padding: 0.3em;
+	border-radius: 0.3em;
+}
+a:hover {
+	color: var(--fd);
+	background-position: 0% 100%;
+}
+nav a:hover {
+	color: var(--cp);
+}
+
+#socials > {
+	filter: none;
+	transition: filter 200ms;
+}
+#socials > :hover {
+	filter: contrast(0.1);
+}
+#socials * {
+	background: transparent !important;
+}
+
+button, .button {
+	background: linear-gradient(270deg, #0000 0%, #0000 50%, var(--cp) 50%, var(--cp) 100%);
+	background-position: 100% 0%;
+	background-size: 200% 100%;
+	transition: background 400ms, color 400ms;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	padding: 0.2em;
+	border-radius: 0.2em;
+	font-family: inherit;
+	font-size: inherit;
+	text-align: center;
+}
+button.main, .button.main {
+	background: linear-gradient(270deg, var(--cs) 0%, var(--cs) 50%, var(--cp) 50%, var(--cp) 100%);
+	background-position: 100% 0%;
+	background-size: 200% 100%;
+	color: var(--fd);
+}
+button:hover, .button:hover {
+	color: var(--fl);
+	background-position: 0% 0%;
+}
+
+#title::after {
+	font-size: 3rem;
+	content: "19wintersp";
+	color: var(--fl);
+	font-family: "Montserrat", sans-serif;
+	animation: title-text 2s;
+}
+
+#title-nav {
+	animation: title-nav 4s;
+	filter: opacity(100%);
+	transition: filter 500ms;
+}
+body.scroll #title-nav {
+	filter: opacity(0%);
+}
+
+body > * {
+	--padding: max(calc(50% - 500px), 40px);
+	--opadding: var(--padding);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: calc(100% - calc(var(--padding) * 2));
+	height: 80vh;
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+body > section:not(:last-of-type) {
+	background: linear-gradient(180deg, var(--fl) 0%, var(--fl) 80%, var(--cu) 100%);
+	justify-content: space-between;
+}
+body > section:last-of-type {
+	background: linear-gradient(180deg, var(--fl) 0%, var(--fl) 100%);
+	justify-content: space-between;
+}
+body > section:not(:last-of-type) > :last-child {
+	--padding: calc(0.75 * var(--opadding));
+
+	position: relative;
+	z-index: 1;
+	left: -100vw;
+	width: 200vw;
+	height: var(--padding);
+}
+body > section:not(:last-of-type) > :last-child > :first-child {
+	width: 100%;
+	height: 100%;
+	background-image: url("wave.png");
+	background-size: contain;
+	animation: wavesr 30s infinite linear;
+}
+body > section:not(:last-of-type) > :last-child > :last-child {
+	width: 100%;
+	height: 150%;
+	background-image: url("wave.png");
+	background-size: contain;
+	filter: opacity(0.5);
+	animation: waves 30s infinite linear;
+	transform: translateY(-100%);
+}
+
+#nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 2;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: auto;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	background-color: var(--cp);
+	color: var(--fl);
+	box-shadow: 0px 0px 0px 0px #0000;
+	transform: translateY(-100%);
+	transition: transform 500ms, box-shadow 1s;
+}
+#nav *:not(:first-child) {
+	margin-left: 1em;
+}
+#nav > div {
+	display: flex;
+}
+body.scroll > #nav, #nav:hover {
+	transform: translateY(0px);
+	box-shadow: 0px 0px 8px 8px #0003;
+}
+
+header {
+	background-color: var(--cp);
+	align-items: center;
+	height: 60vh;
+	animation: header 4s;
+}
+
+footer {
+	background-color: var(--cs);
+	height: auto;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	align-items: center;
+}
+
+*[row] {
+	display: flex;
+	align-items: stretch;
+}
+*[row] > * {
+	flex-basis: 0px;
+	flex-grow: 1;
+}
+*[row] > :not(:first-child) {
+	margin-left: 1em;
+}
+
+*[card] {
+	padding: 2em;
+	border-radius: 2em;
+	margin: 1em;
+	border: solid 1px var(--bd);
+	box-shadow: 0px 0px 0px 0px black;
+	transition: all 200ms;
+}
+*[card].action:hover, *[card].action:focus-within {
+	box-shadow: 0px 0px 0.5em 0px black;
+}
