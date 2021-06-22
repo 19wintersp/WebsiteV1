@@ -133,6 +133,9 @@ button:hover, .button:hover {
 	background-position: 0% 0%;
 }
 
+#title {
+	font-size: 0px;
+}
 #title::after {
 	font-size: 3rem;
 	content: "19wintersp";
